@@ -1,0 +1,17 @@
+{
+  "Media query (small breakpoint)": {
+    "prefix": "mqs",
+    "body": ["@media screen and (min-width: 360px) {", "\t$0", "}"],
+    "description": "viewport for mobile phone"
+  },
+  "Media query (medium breakpoint)": {
+    "prefix": "mqm",
+    "body": ["@media screen and (min-width: 768px) {", "\t$0", "}"],
+    "description": "viewport for tablet"
+  },
+  "Media query (large breakpoint)": {
+    "prefix": "mql",
+    "body": ["@media screen and (min-width: 1024px) {", "\t$0", "}"],
+    "description": "viewport for desktop"
+  }
+}

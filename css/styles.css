@@ -1,223 +1,440 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
+@import url("./Button.css");
+@import url("./Card.css");
 
+/* ---- variable declartion ---- */
+:root {
+  --header-height-mobile: 80px;
+}
+
+/* ---- reset ---- */
+body,
+ul,
+p,
+button,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* ---- common ---- */
+* {
+  box-sizing: border-box;
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+}
 
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    color: #fff;
+  min-width: 360px;
 }
-
 
 /* Typeography General*/
-h1 {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
-@media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
+html {
+  font-size: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1,
 h2 {
-    border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #fff;
-}
-
-p {
-    line-height: 1.6em;
-    color: #eee;
+  font-family: "Bodoni Moda", serif;
 }
 
 /* ---- Layout Rules ---- */
 main {
-    margin: 10vh 1em 10vh;
-}
-
-.main-hero {
-    min-height: 40vh;
-    padding-top: 3em;
+  min-width: 360px;
+  margin-top: var(--header-height-mobile);
 }
 
 section {
-    position: relative;
-    min-height: 80vh;
+  position: relative;
+  padding: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  section {
+    padding: 30px;
+  }
+}
 
 /* ---- Module Rules ---- */
 
-/* Navigation Styles*/
-.navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
-}
-
-.navbar__menu li {
-    display: inline-block;
-}
-
-.navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-}
-
-.navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
-
 /* Header Styles */
 .page__header {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
+  min-width: 360px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height-mobile);
+  padding: 0 10px;
+}
+
+.main-logo {
+  width: 120px;
+  height: 40px;
+}
+
+/* Navigation Styles*/
+
+.navbar__menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__menu {
+    display: block;
+  }
+}
+
+#navbar__list {
+  display: none;
+}
+
+#navbar__list > li {
+  color: #000;
+}
+
+.navbar__button-open-menu {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.navbar__button-search {
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .navbar__button-open-menu {
+    display: none;
+  }
+}
+
+/* Section Styles */
+
+/* Section 1 */
+.hero-section {
+  height: calc(100vh - var(--header-height-mobile));
+}
+
+.hero-section__title {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.hero-section__desc {
+  line-height: 1.8rem;
+}
+
+.hero-section .button__primary {
+  margin-top: 20px;
+}
+
+.plane-trail-img {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  right: 0;
+  bottom: 30px;
+}
+
+/* Section 2 */
+.section-2 {
+  background-color: rgb(44, 172, 220, 0.3);
+  padding: 50px 0 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-2 {
+    /* padding: 20px 30px; */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-2 {
+    padding: 50px 100px 100px;
+  }
+}
+
+.section-2__title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.value-card-container {
+}
+
+.value-card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .value-card-list {
+    gap: 30px;
+  }
+}
+
+/* Section 3 */
+
+.section-3 {
+  height: 100vh;
+  display: flex;
+}
+
+.section-3__content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-3__title {
+  font-size: 1.8rem;
+}
+
+.section-3__title p {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: initial;
+}
+
+.section-3__desc {
+  margin-top: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.section-3 .button__primary {
+  margin-top: 30px;
+}
+
+.section-3__img {
+  margin-top: 1rem;
+  width: 100%;
+  height: 300px;
+}
+
+.plane-trail-img.left {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+@media screen and (min-width: 1024px) {
+  .section-3 {
+    border: solid 1px red;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-3__content-container {
+    gap: 30px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    max-width: 1200px;
+  }
+
+  .section-3__text-wrapper {
+    max-width: 500px;
+  }
+
+  .section-3__title {
+    font-size: 2.7rem;
+    font-weight: 700;
+  }
+
+  .section-3__img {
+    margin-top: 0;
+    width: 500px;
+    height: 550px;
+    border: solid 1px blue;
+  }
+}
+
+/* Section 4 */
+.section-4 {
+  border: solid 1px blue;
+}
+
+.section-4__title {
+  text-align: center;
+}
+
+.section-4__title p {
+  font-size: 1rem;
+}
+
+.info-card-container {
+  margin-top: 1.5rem;
+}
+
+.info-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .section-4 {
+    height: 100vh;
+  }
+
+  .section-4__title {
+    font-size: 2.7rem;
+    font-weight: 700;
+  }
+
+  .info-card-container {
+    margin-top: 2.5rem;
+  }
+
+  .info-card-list {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+/* Section 5 */
+.section-5 {
+  height: 100vh;
+  border: solid 1px cyan;
+}
+
+.section-5__title {
+  margin-top: 1rem;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.section-5__desc {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.section-5 form {
+  margin-top: 2rem;
+}
+
+.section-5 input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: solid 1px #263b4a;
+  padding-left: 10px;
+}
+
+.section-5 .button__primary {
+  margin-top: 1rem;
+}
+
+.section-5__img {
+  width: 100%;
+  height: 300px;
+}
+
+@media screen and (min-width: 1024px) {
+  .section-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-5 .content-container {
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+    width: 1000px;
+  }
+
+  .section-5__title {
+    margin-top: 0;
+  }
 }
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
-    padding: 3em;
-    color: #fff;
+  min-width: 360px;
+  padding: 15px;
 }
 
-.page__footer p{
-    color: #fff;
+.footer__logo-img {
+  width: 100%;
+  height: auto;
 }
 
-
-/* ---- Theme Rules ---- */
-/* Landing Container Styles */
-.landing__container {
-    padding: 1em;
-    text-align: left;
+.content-container {
 }
 
-@media only screen and (min-width: 35em){
-    .landing__container {
-        max-width: 50em;
-        padding: 4em;
-    }
+.footer__desc {
+  margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
-section:nth-of-type(even) .landing__container {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: right; 
+.social-media-list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
 }
 
-/* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
-section:nth-of-type(odd) .landing__container::before {
-    content: '';
-    background: rgba(255, 255, 255, 0.187);
-    position: absolute;
-    z-index: -5;
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+.social-media-list li img {
+  width: 30px;
+  height: 30px;
+  border: solid 1px red;
 }
 
-section:nth-of-type(even) .landing__container::before {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    top: 3em;
-    right: 3em;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+.content-container .section + div {
+  margin-top: 1.5rem;
 }
 
-section:nth-of-type(3n) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -5;
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+.content-container .section h3 {
+  font-size: 2rem;
 }
 
-section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
-    position: absolute;
-    right: 20vw;
-    bottom: -5em;
-    z-index: -5;
-    width: 15vh;
-    height: 15vh;
-    border-radius: 50%;
-    opacity: 0;
-    transition: ease 0.5s all;
+.section ul li {
+  font-size: 1.5rem;
+  line-height: 2.3rem;
 }
 
-
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+.page__footer footer {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-section.your-active-class .landing__container::before {
-    opacity: 1;
-    animation: rotate 4s linear 0s infinite forwards;
-}
-
-section.your-active-class .landing__container::after {
-    opacity: 1;
-    animation: rotate 5s linear 0s infinite forwards reverse;
-}
-
-/* Section Active Styles Keyframe Animations */
-@keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
+@media screen and (min-width: 1024px) {
+  .content-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

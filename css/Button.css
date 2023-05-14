@@ -1,0 +1,43 @@
+.button__primary {
+  border: solid 1px rgb(38, 59, 74);
+  background-color: rgb(38, 59, 74);
+  color: #fff;
+}
+
+.button__primary:hover {
+  border: solid 1px #263b4a;
+  color: #263b4a;
+  background-color: #fff;
+  transition: all ease-in-out 0.2s;
+}
+
+.button__secondary {
+  border: solid 1px #2cacdc;
+  background-color: #fff;
+  color: #8f9ca1;
+}
+
+/* mobile */
+.button__primary.medium,
+.button__secondary.medium {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .button__primary.medium,
+  .button__secondary.medium {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+/* pc */
+@media screen and (min-width: 1024px) {
+  .button__primary.medium,
+  .button__secondary.medium {
+    font-size: 1.2rem;
+  }
+}

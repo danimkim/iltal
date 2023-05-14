@@ -1,59 +1,268 @@
 <!DOCTYPE >
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
+    <header class="page__header">
+      <a href="#">
+        <img src="./assets/logo-hz.png" alt="Logo" class="main-logo" />
+      </a>
+      <div>
+        <button class="navbar__button-search">
+          <img src="./assets/icons/search.svg" />
+        </button>
+        <button class="navbar__button-open-menu">
+          <img src="./assets/icons/hamburger.svg" />
+        </button>
+      </div>
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+    <main>
+      <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <section
+        class="hero-section"
+        id="section1"
+        data-nav="Section 1"
+        class="your-active-class"
+      >
+        <p>Have A Nice Day!</p>
+        <h2 class="hero-section__title">
+          Explore the world <br />
+          best place with <br />
+          Iltal.
+        </h2>
+        <p class="hero-section__desc">
+          Start exploring your next great <br />
+          adventure today and discover your next <br />
+          great aventure!
+        </p>
+        <button class="button__primary medium">Book A Tour</button>
+        <img src="./assets/plane-trail.png" class="plane-trail-img" />
+      </section>
+      <section class="section-2" id="section2" data-nav="Section 2">
+        <h2 class="section-2__title">Our Values</h2>
+        <div class="value-card-container">
+          <ul class="value-card-list">
+            <li class="value-card">
+              <img class="value-card__icon" src="/" alt="icon" />
+              <h3 class="value-card__title">Honesty</h3>
+              <p class="value-card__desc">
+                For us, as a company, it is very important that the information
+                provided to our customers is honest and true.
+              </p>
+            </li>
+            <li class="value-card">
+              <img class="value-card__icon" src="/" alt="icon" />
+              <h3 class="value-card__title">Honesty</h3>
+              <p class="value-card__desc">
+                For us, as a company, it is very important that the information
+                provided to our customers is honest and true.
+              </p>
+            </li>
+            <li class="value-card">
+              <img class="value-card__icon" src="/" alt="icon" />
+              <h3 class="value-card__title">Honesty</h3>
+              <p class="value-card__desc">
+                For us, as a company, it is very important that the information
+                provided to our customers is honest and true.
+              </p>
+            </li>
+            <li class="value-card">
+              <img class="value-card__icon" src="/" alt="icon" />
+              <h3 class="value-card__title">Honesty</h3>
+              <p class="value-card__desc">
+                For us, as a company, it is very important that the information
+                provided to our customers is honest and true.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <img src="./assets/plane-trail.png" class="plane-trail-img left" />
+      </section>
+      <section class="section-3" id="section3" data-nav="Section 3">
+        <div class="section-3__content-container">
+          <div class="section-3__text-wrapper">
+            <h2 class="section-3__title">
+              <p>About Iltal</p>
+              One of The Best Travel Agencies in The World
+            </h2>
+            <p class="section-3__desc">
+              Iltal is a simple website where people can book their destinations
+              directly on our website.
+            </p>
+            <p class="section-3__desc">
+              Iltal is currently available in over 100 countries around the
+              world. Our software was developed based on customer.
+            </p>
+            <button class="button__primary medium">Read More</button>
+          </div>
+          <img src="/" alt="" class="section-3__img" />
+        </div>
+        <img src="./assets/plane-trail.png" class="plane-trail-img" />
+      </section>
+      <section class="section-4" id="section4" data-nav="Section 4">
+        <h2 class="section-4__title">
+          <p>Modern & Beautiful</p>
+          Explore Top Destiantions
+        </h2>
+        <div class="info-card-container">
+          <ul class="info-card-list">
+            <li class="info-card">
+              <img class="info-card__img" src="/" alt="" />
+              <div class="info-card__main-info-container">
+                <h3 class="destination-name">
+                  <ul>
+                    <li>Maldives</li>
+                    <li>Hurawalhi Island</li>
+                  </ul>
+                </h3>
+                <div class="price-and-rate">
+                  <p>$160/Per Person</p>
+                  <p>⭐️⭐️⭐️⭐️ 4.8(42)</p>
+                </div>
+              </div>
+              <p class="info-card__desc">
+                Set on an enchanting private island in the pristine Lhaviyani
+                Atoll in the Maldives, Hurawalhi Island Resort is much like your
+                relationship.
+              </p>
+              <button class="button__secondary medium">See Details</button>
+            </li>
+            <li class="info-card">
+              <img class="info-card__img" src="/" alt="" />
+              <div class="info-card__main-info-container">
+                <h3 class="destination-name">
+                  <ul>
+                    <li>Maldives</li>
+                    <li>Hurawalhi Island</li>
+                  </ul>
+                </h3>
+                <div class="price-and-rate">
+                  <p>$160/Per Person</p>
+                  <p>⭐️⭐️⭐️⭐️ 4.8(42)</p>
+                </div>
+              </div>
+              <p class="info-card__desc">
+                Set on an enchanting private island in the pristine Lhaviyani
+                Atoll in the Maldives, Hurawalhi Island Resort is much like your
+                relationship.
+              </p>
+              <button class="button__secondary medium">See Details</button>
+            </li>
+            <li class="info-card">
+              <img class="info-card__img" src="/" alt="" />
+              <div class="info-card__main-info-container">
+                <h3 class="destination-name">
+                  <ul>
+                    <li>Maldives</li>
+                    <li>Hurawalhi Island</li>
+                  </ul>
+                </h3>
+                <div class="price-and-rate">
+                  <p>$160/Per Person</p>
+                  <p>⭐️⭐️⭐️⭐️ 4.8(42)</p>
+                </div>
+              </div>
+              <p class="info-card__desc">
+                Set on an enchanting private island in the pristine Lhaviyani
+                Atoll in the Maldives, Hurawalhi Island Resort is much like your
+                relationship.
+              </p>
+              <button class="button__secondary medium">See Details</button>
+            </li>
+          </ul>
+        </div>
+        <img src="./assets/plane-trail.png" class="plane-trail-img left" />
+      </section>
+      <section class="section-5" id="section5" data-nav="Section 5">
+        <div class="content-container">
+          <div class="text-container">
+            <h2 class="section-5__title">
+              Get Special Offers, and more from Iltal
+            </h2>
+            <p class="section-5__desc">
+              Get update to special deals and exclusive offers, Sign up to our
+              newsletters!
+            </p>
+            <form>
+              <input type="text" placeholder="Enter Your Email" />
+              <button class="button__primary medium">Subscribe</button>
+            </form>
+          </div>
+          <img src="/" alt="" class="section-5__img" />
+        </div>
+        <img src="./assets/plane-trail.png" class="plane-trail-img" />
+      </section>
+    </main>
+    <footer class="page__footer">
+      <div class="content-container">
+        <div>
+          <header>
+            <img
+              src="./assets/logo-hz.png"
+              alt="Iltal"
+              class="footer__logo-img"
+            />
+            <p class="footer__desc">
+              Iltal is a travel agency that provides travel and tourism-related
+              services to the all over the world.
+            </p>
+          </header>
+          <ul class="social-media-list">
+            <li><img src="/" alt="Iltal facebook" /></li>
+            <li><img src="/" alt="Iltal Instagram" /></li>
+            <li><img src="/" alt="Iltal Twitter" /></li>
+            <li><img src="/" alt="Iltal LinkedIn" /></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Quick Link</h3>
+          <ul>
+            <li>Our Team</li>
+            <li>About Us</li>
+            <li>How It Works</li>
+            <li>Our Blog</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Categories</h3>
+          <ul>
+            <li>Travel</li>
+            <li>Technology</li>
+            <li>Entertainment</li>
+            <li>Destination</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>Get In Touch</h3>
+          <ul>
+            <li>Location</li>
+            <li>Email</li>
+            <li>Phone</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
-
-</body>
+      <footer>Copyright &copy 2023 Danim Kim All right reserved</footer>
+    </footer>
+    <script src="./js/app.js" />
+  </body>
 </html>

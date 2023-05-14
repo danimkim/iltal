@@ -1,0 +1,96 @@
+/* ---- Section2 (Our Values) Card ---- */
+.value-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 250px;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.value-card__icon {
+  width: 100px;
+  height: 100px;
+}
+
+.value-card__title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.value-card__desc {
+  line-height: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .value-card__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .value-card {
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+  }
+  .value-card__title {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  .value-card__desc {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}
+
+/* ---- Section 4 (Top Destination) Card ---- */
+.info-card__img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info-card__main-info-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.5rem;
+}
+
+.destination-name ul li {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.price-and-rate {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: right;
+}
+
+.info-card__desc {
+  margin-top: 1.5rem;
+  color: #8f9ca1;
+  line-height: 1.8rem;
+}
+
+.section-4 .button__secondary {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .info-card {
+    max-width: 350px;
+  }
+
+  .info-card__img {
+    max-height: 350px;
+  }
+
+  .info-card__desc {
+    font-size: 0.9rem;
+  }
+}
