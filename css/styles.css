@@ -32,6 +32,11 @@ button:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* ---- common ---- */
 * {
   box-sizing: border-box;
@@ -45,6 +50,7 @@ button img {
 /* ---- Base Rules ---- */
 body {
   min-width: 360px;
+  overflow-x: hidden;
 }
 
 /* Typeography General*/
@@ -54,6 +60,7 @@ body {
 
 html {
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -121,9 +128,6 @@ section {
 }
 
 @media screen and (min-width: 768px) {
-  .page__header {
-  }
-
   .page-header-content-wrapper {
     width: 100%;
     max-width: 1200px;
@@ -172,31 +176,12 @@ section {
   bottom: -170px;
 }
 
-.navbar__menu.visible {
-  box-shadow: 0 4px 15px -12px #808080;
-  position: absolute;
-  bottom: -200px;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  background-color: #fff;
-  opacity: 1;
-  transition: all ease-in-out 0.3s;
-}
-.navbar__menu.visible #navbar__list > li {
-  font-size: 1.3rem;
-  line-height: 3rem;
-  text-align: center;
-}
-
-.navbar__menu.visible #navbar__list li:hover {
-  font-weight: 700;
-  text-shadow: 2px 2px 2px #179ecb;
-  transition: all ease-in-out 0.2s;
-}
-
 #navbar__list > li {
   color: #000;
+}
+
+#navbar__list > li:hover {
+  cursor: pointer;
 }
 
 .navbar__button-open-menu {
@@ -210,9 +195,40 @@ section {
   height: 30px;
 }
 
+/* the active state of the navigation dropdown in mobile viewport*/
+.visible {
+  box-shadow: 0 4px 15px -12px #808080;
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #fff;
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
+}
+
+.visible #navbar__list > li {
+  font-size: 1.3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.navbar__menu.visible #navbar__list li:hover {
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #179ecb;
+  transition: all ease-in-out 0.2s;
+}
+
+/* the active state of the active navigation tab */
+.active {
+  text-shadow: 2px 2px 2px #179ecb;
+}
+
 @media (min-width: 768px) {
   .navbar__menu {
-    /* border: solid 1px blue; */
+    position: static;
+    opacity: 1;
     display: block;
     width: 100%;
   }
@@ -227,11 +243,22 @@ section {
   }
 
   #navbar__list > li {
-    /* align-items: center; */
+    box-sizing: border-box;
+    padding: 0 0.3rem 0.5rem;
+    border-bottom: solid 2px transparent;
+  }
+
+  #navbar__list > li:hover {
+    border-bottom: solid 2px #179ecb;
   }
 
   .navbar__button-open-menu {
     display: none;
+  }
+
+  .active {
+    text-shadow: none;
+    /* border-bottom: solid 2px #179ecb; */
   }
 }
 
@@ -263,8 +290,16 @@ section {
   position: absolute;
   width: 250px;
   height: auto;
-  right: 0;
+  right: -300px;
   bottom: 30px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.active-section .plane-trail-img {
+  opacity: 1;
+  right: 0;
+  transition: all ease-in-out 0.4s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -275,9 +310,8 @@ section {
   }
 
   .hero-section .content-container {
-    /* min-width: 1200px; */
     display: flex;
-    gap: 20px;
+    gap: 100px;
     justify-content: space-between;
   }
 
@@ -298,7 +332,7 @@ section {
 
   .hero-section__img {
     display: block;
-    width: 500px;
+    width: 400px;
     height: 500px;
   }
 }
@@ -368,12 +402,18 @@ section {
 .section-3__img {
   margin-top: 1rem;
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 
 .plane-trail-img.left {
-  left: 0;
+  left: -300px;
   transform: scaleX(-1);
+}
+
+.active-section .plane-trail-img.left {
+  opacity: 1;
+  left: 0;
+  transition: all ease-in-out 0.4s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -383,7 +423,7 @@ section {
   }
 
   .section-3__content-container {
-    gap: 30px;
+    gap: 100px;
     flex-direction: row-reverse;
     justify-content: center;
     max-width: 1200px;
@@ -400,7 +440,7 @@ section {
 
   .section-3__img {
     margin-top: 0;
-    width: 500px;
+    width: 400px;
     height: 550px;
   }
 }
@@ -481,8 +521,9 @@ section {
 }
 
 .section-5__img {
+  margin-top: 2rem;
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -500,6 +541,11 @@ section {
 
   .section-5__title {
     margin-top: 0;
+  }
+
+  .section-5__img {
+    width: 550px;
+    height: 400px;
   }
 }
 

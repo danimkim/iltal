@@ -8,8 +8,8 @@
 }
 
 .value-card__icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .value-card__title {
@@ -22,9 +22,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .value-card {
+    padding: 20px;
+  }
+
   .value-card__icon {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -32,7 +36,6 @@
   .value-card {
     width: 250px;
     height: 300px;
-    padding: 10px;
   }
   .value-card__title {
     font-size: 1.2rem;

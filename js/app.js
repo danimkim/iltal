@@ -24,30 +24,10 @@
  */
 const navMenu = document.querySelector(".navbar__menu");
 const navList = document.querySelector("#navbar__list");
+const sections = document.querySelectorAll("section");
 
-const navMenuNames = [
-  "Home",
-  "About us",
-  "Blog",
-  "Top Destinations",
-  "Contact",
-];
-
+/** hamburger button at top right when in mobile viewport */
 const openMenuButton = document.querySelector(".navbar__button-open-menu");
-
-const valueCardTitles = [
-  "Honesty",
-  "Communication",
-  "Quality Services",
-  "Loyalty",
-];
-
-const valueCardContents = [
-  "For us, as a company, it is very important that the information provided to our customers is honest and true.",
-  "Each one of us must interact transparently and appropriately, trying to strengthen our interpersonal relations and the image of the company.",
-  "Service quality is one of our most important values which demands all our effort, determination, and courage to be successful.",
-  " Our team members must show loyalty; referring to faithfulness, commitment, identification, pride, membership, confidentially, and interest defense.",
-];
 
 /**
  * End Global Variables
@@ -55,9 +35,7 @@ const valueCardContents = [
  *
  */
 
-const handleOpenMenuButtonClick = () => {
-  // add class name 'open'
-  openMenuButton.classList.toggle("open");
+const toggleMenu = () => {
   navMenu.classList.toggle("visible");
 };
 
@@ -70,19 +48,40 @@ const handleOpenMenuButtonClick = () => {
 // build the nav
 
 // dynamically add nav tab to navList
-navMenuNames.map((name) => {
+
+Array.from(sections).map((section, idx) => {
   const li = document.createElement("li");
-  li.innerHTML = name;
+  const anchor = document.createElement("a");
+
+  anchor.href = `#section${idx + 1}`;
+  anchor.innerHTML = section.dataset.nav;
+  li.classList.add(`section${idx + 1}`);
+
+  li.appendChild(anchor);
   navList.appendChild(li);
 });
 
 // build menu open button
-
-openMenuButton.addEventListener("click", handleOpenMenuButtonClick);
+openMenuButton.addEventListener("click", toggleMenu);
 
 // Add class 'active' to section when near top of viewport
+const addActiveToSection = (section) => {
+  if (
+    section.getBoundingClientRect().top <= 300 &&
+    section.getBoundingClientRect().top >=
+      -(section.getBoundingClientRect().height - 300)
+  ) {
+    section.classList.add("active-section");
+  } else {
+    section.classList.remove("active-section");
+  }
+};
 
 // Scroll to anchor ID using scrollTO event
+const scrollToSection = (link) => {
+  const section = document.getElementById(link);
+  section.scrollIntoView({ behavior: "smooth" });
+};
 
 /**
  * End Main Functions
@@ -93,5 +92,19 @@ openMenuButton.addEventListener("click", handleOpenMenuButtonClick);
 // Build menu
 
 // Scroll to section on link click
+const navTabs = Array.from(document.querySelectorAll("#navbar__list li"));
+
+for (let tab of navTabs) {
+  tab.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollToSection(tab.classList[0]);
+  });
+}
 
 // Set sections as active
+
+for (let section of sections) {
+  window.addEventListener("scroll", () => {
+    addActiveToSection(section);
+  });
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Manipulating the DOM</title>
+    <title>ILTAL | Your Trip Planner</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <!-- Load Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Open+Sans:wght@300;400&display=swap"
@@ -42,7 +43,7 @@
       <section
         class="hero-section"
         id="section1"
-        data-nav="Section 1"
+        data-nav="Home"
         class="your-active-class"
       >
         <div class="content-container">
@@ -60,16 +61,24 @@
             </p>
             <button class="button__primary medium">Book A Tour</button>
           </div>
-          <img src="/" alt="" class="hero-section__img" />
+          <img
+            src="./assets/main.jpg"
+            alt="Rialto Bridge, Venice Italy"
+            class="hero-section__img"
+          />
         </div>
         <img src="./assets/plane-trail.png" class="plane-trail-img" />
       </section>
-      <section class="section-2" id="section2" data-nav="Section 2">
+      <section class="section-2" id="section2" data-nav="About Us">
         <h2 class="section-2__title">Our Values</h2>
         <div class="value-card-container">
           <ul class="value-card-list">
             <li class="value-card">
-              <img class="value-card__icon" src="/" alt="icon" />
+              <img
+                class="value-card__icon"
+                src="./assets/icons/handshake.svg"
+                alt="honesty"
+              />
               <h3 class="value-card__title">Honesty</h3>
               <p class="value-card__desc">
                 For us, as a company, it is very important that the information
@@ -77,34 +86,49 @@
               </p>
             </li>
             <li class="value-card">
-              <img class="value-card__icon" src="/" alt="icon" />
-              <h3 class="value-card__title">Honesty</h3>
+              <img
+                class="value-card__icon"
+                src="./assets//icons/chat-bubbles.svg"
+                alt="Communication"
+              />
+              <h3 class="value-card__title">Communication</h3>
               <p class="value-card__desc">
-                For us, as a company, it is very important that the information
-                provided to our customers is honest and true.
+                Each one of us must interact transparently and appropriately,
+                trying to strengthen our interpersonal relations and the image
+                of the company.
               </p>
             </li>
             <li class="value-card">
-              <img class="value-card__icon" src="/" alt="icon" />
-              <h3 class="value-card__title">Honesty</h3>
+              <img
+                class="value-card__icon"
+                src="./assets/icons/quality-certificate-award.svg"
+                alt="Quality Services"
+              />
+              <h3 class="value-card__title">Quality Services</h3>
               <p class="value-card__desc">
-                For us, as a company, it is very important that the information
-                provided to our customers is honest and true.
+                Service quality is one of our most important values which
+                demands all our effort, determination, and courage to be
+                successful.
               </p>
             </li>
             <li class="value-card">
-              <img class="value-card__icon" src="/" alt="icon" />
-              <h3 class="value-card__title">Honesty</h3>
+              <img
+                class="value-card__icon"
+                src="./assets/icons/hand-holding-heart.svg"
+                alt="Loyalty"
+              />
+              <h3 class="value-card__title">Loyalty</h3>
               <p class="value-card__desc">
-                For us, as a company, it is very important that the information
-                provided to our customers is honest and true.
+                Our team members must show loyalty; referring to faithfulness,
+                commitment, identification, pride, membership, confidentially,
+                and interest defense.
               </p>
             </li>
           </ul>
         </div>
         <img src="./assets/plane-trail.png" class="plane-trail-img left" />
       </section>
-      <section class="section-3" id="section3" data-nav="Section 3">
+      <section class="section-3" id="section3" data-nav="Blog">
         <div class="section-3__content-container">
           <div class="section-3__text-wrapper">
             <h2 class="section-3__title">
@@ -121,11 +145,15 @@
             </p>
             <button class="button__primary medium">Read More</button>
           </div>
-          <img src="/" alt="" class="section-3__img" />
+          <img
+            src="./assets/about-us.jpg"
+            alt="Manarola, Italy"
+            class="section-3__img"
+          />
         </div>
         <img src="./assets/plane-trail.png" class="plane-trail-img" />
       </section>
-      <section class="section-4" id="section4" data-nav="Section 4">
+      <section class="section-4" id="section4" data-nav="Top Destinations">
         <h2 class="section-4__title">
           <p>Modern & Beautiful</p>
           Explore Top Destiantions
@@ -133,7 +161,11 @@
         <div class="info-card-container">
           <ul class="info-card-list">
             <li class="info-card">
-              <img class="info-card__img" src="/" alt="" />
+              <img
+                class="info-card__img"
+                src="./assets/maldives.jpg"
+                alt="aerial photography of resort rooms and island"
+              />
               <div class="info-card__main-info-container">
                 <h3 class="destination-name">
                   <ul>
@@ -154,12 +186,16 @@
               <button class="button__secondary medium">See Details</button>
             </li>
             <li class="info-card">
-              <img class="info-card__img" src="/" alt="" />
+              <img
+                class="info-card__img"
+                src="./assets/greece.jpg"
+                alt="white and blue painted building"
+              />
               <div class="info-card__main-info-container">
                 <h3 class="destination-name">
                   <ul>
-                    <li>Maldives</li>
-                    <li>Hurawalhi Island</li>
+                    <li>Greece</li>
+                    <li>Santorini, Oia</li>
                   </ul>
                 </h3>
                 <div class="price-and-rate">
@@ -168,19 +204,23 @@
                 </div>
               </div>
               <p class="info-card__desc">
-                Set on an enchanting private island in the pristine Lhaviyani
-                Atoll in the Maldives, Hurawalhi Island Resort is much like your
-                relationship.
+                Oia or la is a small village and former community in the South
+                Aegean on the islands of Thira (Santorini) and Therasia, in the
+                Cyclades, Greece.
               </p>
               <button class="button__secondary medium">See Details</button>
             </li>
             <li class="info-card">
-              <img class="info-card__img" src="/" alt="" />
+              <img
+                class="info-card__img"
+                src="./assets/italy.jpg"
+                alt="a boat is docked in front of a castle"
+              />
               <div class="info-card__main-info-container">
                 <h3 class="destination-name">
                   <ul>
-                    <li>Maldives</li>
-                    <li>Hurawalhi Island</li>
+                    <li>Italy</li>
+                    <li>Piazza Castello</li>
                   </ul>
                 </h3>
                 <div class="price-and-rate">
@@ -189,9 +229,9 @@
                 </div>
               </div>
               <p class="info-card__desc">
-                Set on an enchanting private island in the pristine Lhaviyani
-                Atoll in the Maldives, Hurawalhi Island Resort is much like your
-                relationship.
+                The Palazzo Porto is a palace in Piazza Castello, Vicenza,
+                northern Italy. It is one of two palazzi in the city designed by
+                Andrea Palladio.
               </p>
               <button class="button__secondary medium">See Details</button>
             </li>
@@ -199,7 +239,7 @@
         </div>
         <img src="./assets/plane-trail.png" class="plane-trail-img left" />
       </section>
-      <section class="section-5" id="section5" data-nav="Section 5">
+      <section class="section-5" id="section5" data-nav="Contact">
         <div class="content-container">
           <div class="text-container">
             <h2 class="section-5__title">
@@ -214,7 +254,11 @@
               <button class="button__primary medium">Subscribe</button>
             </form>
           </div>
-          <img src="/" alt="" class="section-5__img" />
+          <img
+            src="./assets/contact.jpg"
+            alt="black framed Ray-Ban Wayfarer sunglasses on top of book"
+            class="section-5__img"
+          />
         </div>
         <img src="./assets/plane-trail.png" class="plane-trail-img" />
       </section>
@@ -234,10 +278,18 @@
             </p>
           </header>
           <ul class="social-media-list">
-            <li><img src="/" alt="Iltal facebook" /></li>
-            <li><img src="/" alt="Iltal Instagram" /></li>
-            <li><img src="/" alt="Iltal Twitter" /></li>
-            <li><img src="/" alt="Iltal LinkedIn" /></li>
+            <li>
+              <img src="./assets/icons/facebook.svg" alt="Iltal facebook" />
+            </li>
+            <li>
+              <img src="./assets/icons/instagram.svg" alt="Iltal Instagram" />
+            </li>
+            <li>
+              <img src="./assets/icons/twitter.svg" alt="Iltal Twitter" />
+            </li>
+            <li>
+              <img src="./assets/icons/linkedin.svg" alt="Iltal LinkedIn" />
+            </li>
           </ul>
         </div>
         <div class="section">
