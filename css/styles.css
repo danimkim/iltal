@@ -4,6 +4,7 @@
 /* ---- variable declartion ---- */
 :root {
   --header-height-mobile: 80px;
+  --header-height-pc: 120px;
 }
 
 /* ---- reset ---- */
@@ -105,6 +106,18 @@ section {
   height: 40px;
 }
 
+@media screen and (min-width: 1024px) {
+  .page__header {
+    border: solid 1px red;
+    height: var(--header-height-pc);
+  }
+
+  .main-logo {
+    width: 150px;
+    height: 60px;
+  }
+}
+
 /* Navigation Styles*/
 
 .navbar__menu {
@@ -113,12 +126,9 @@ section {
 
 @media screen and (min-width: 768px) {
   .navbar__menu {
+    border: solid 1px red;
     display: block;
   }
-}
-
-#navbar__list {
-  display: none;
 }
 
 #navbar__list > li {
@@ -182,8 +192,9 @@ section {
   }
 
   .hero-section .content-container {
-    min-width: 1200px;
+    /* min-width: 1200px; */
     display: flex;
+    gap: 20px;
     justify-content: space-between;
   }
 
