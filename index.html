@@ -14,24 +14,25 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
     <header class="page__header">
-      <a href="#">
-        <img src="./assets/logo-hz.png" alt="Logo" class="main-logo" />
-      </a>
-      <div>
-        <button class="navbar__button-search">
-          <img src="./assets/icons/search.svg" />
-        </button>
-        <button class="navbar__button-open-menu">
-          <img src="./assets/icons/hamburger.svg" />
-        </button>
+      <div class="page-header-content-wrapper">
+        <a href="#">
+          <img src="./assets/logo-hz.png" alt="Logo" class="main-logo" />
+        </a>
+        <nav class="navbar__menu">
+          <!-- Navigation starts as empty UL that will be populated with JS -->
+          <ul id="navbar__list"></ul>
+        </nav>
+        <div class="button-container">
+          <button class="navbar__button-search">
+            <img src="./assets/icons/search.svg" />
+          </button>
+          <button class="navbar__button-open-menu">
+            <img src="./assets/icons/hamburger.svg" />
+          </button>
+          <button class="button__primary login">Login</button>
+        </div>
       </div>
-      <nav class="navbar__menu">
-        <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list"></ul>
-      </nav>
     </header>
     <main>
       <!-- Each Section has an ID (used for the anchor) and 

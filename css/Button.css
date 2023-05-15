@@ -2,13 +2,13 @@
   border: solid 1px rgb(38, 59, 74);
   background-color: rgb(38, 59, 74);
   color: #fff;
+  transition: all ease-in-out 0.2s;
 }
 
 .button__primary:hover {
   border: solid 1px #263b4a;
   color: #263b4a;
   background-color: #fff;
-  transition: all ease-in-out 0.2s;
 }
 
 .button__secondary {

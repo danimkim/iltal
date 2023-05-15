@@ -25,7 +25,13 @@
 const navMenu = document.querySelector(".navbar__menu");
 const navList = document.querySelector("#navbar__list");
 
-const navMenuNames = ["Home", "About us", "Blog", "Contact"];
+const navMenuNames = [
+  "Home",
+  "About us",
+  "Blog",
+  "Top Destinations",
+  "Contact",
+];
 
 const openMenuButton = document.querySelector(".navbar__button-open-menu");
 
