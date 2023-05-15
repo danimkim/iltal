@@ -39,6 +39,7 @@ const toggleMenu = () => {
   navMenu.classList.toggle("visible");
 };
 
+const getNavMenu = (sectionId) => document.getElementById(`nav-${sectionId}`);
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -55,6 +56,7 @@ Array.from(sections).map((section, idx) => {
 
   anchor.href = `#section${idx + 1}`;
   anchor.innerHTML = section.dataset.nav;
+  li.id = `nav-section${idx + 1}`;
   li.classList.add(`section${idx + 1}`);
 
   li.appendChild(anchor);
@@ -66,14 +68,17 @@ openMenuButton.addEventListener("click", toggleMenu);
 
 // Add class 'active' to section when near top of viewport
 const addActiveToSection = (section) => {
+  console.log(getNavMenu(section.id));
   if (
     section.getBoundingClientRect().top <= 300 &&
     section.getBoundingClientRect().top >=
       -(section.getBoundingClientRect().height - 300)
   ) {
     section.classList.add("active-section");
+    getNavMenu(section.id).classList.add("active");
   } else {
     section.classList.remove("active-section");
+    getNavMenu(section.id).classList.remove("active");
   }
 };
 

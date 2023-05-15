@@ -248,17 +248,13 @@ section {
     border-bottom: solid 2px transparent;
   }
 
-  #navbar__list > li:hover {
-    border-bottom: solid 2px #179ecb;
-  }
-
   .navbar__button-open-menu {
     display: none;
   }
 
-  .active {
+  #navbar__list > li.active {
     text-shadow: none;
-    /* border-bottom: solid 2px #179ecb; */
+    border-bottom: solid 2px #179ecb;
   }
 }
 
