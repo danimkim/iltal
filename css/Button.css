@@ -12,9 +12,15 @@
 }
 
 .button__secondary {
-  border: solid 1px #2cacdc;
+  border: solid 1px #179ecb;
   background-color: #fff;
-  color: #8f9ca1;
+  color: #179ecb;
+}
+
+.button__secondary:hover {
+  color: #fff;
+  background-color: #179ecb;
+  transition: all ease-in-out 0.2s;
 }
 
 /* mobile */

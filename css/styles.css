@@ -74,7 +74,7 @@ main {
 
 section {
   position: relative;
-  padding: 15px;
+  padding: 50px 15px 80px;
 }
 
 @media screen and (min-width: 768px) {
@@ -162,6 +162,10 @@ section {
   margin-top: 20px;
 }
 
+.hero-section__img {
+  display: none;
+}
+
 .plane-trail-img {
   position: absolute;
   width: 250px;
@@ -170,16 +174,45 @@ section {
   bottom: 30px;
 }
 
+@media screen and (min-width: 1024px) {
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-section .content-container {
+    min-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero-section__title {
+    font-size: 4rem;
+    letter-spacing: -0.1rem;
+    font-weight: 700;
+  }
+
+  .hero-section__desc {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-section .button__primary {
+    margin-top: 3rem;
+  }
+
+  .hero-section__img {
+    display: block;
+    width: 500px;
+    height: 500px;
+  }
+}
+
 /* Section 2 */
 .section-2 {
   background-color: rgb(44, 172, 220, 0.3);
   padding: 50px 0 80px;
-}
-
-@media screen and (min-width: 768px) {
-  .section-2 {
-    /* padding: 20px 30px; */
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -192,9 +225,6 @@ section {
   margin-bottom: 40px;
   text-align: center;
   font-size: 2rem;
-}
-
-.value-card-container {
 }
 
 .value-card-list {
@@ -254,7 +284,6 @@ section {
 
 @media screen and (min-width: 1024px) {
   .section-3 {
-    border: solid 1px red;
     justify-content: center;
     align-items: center;
   }
@@ -279,13 +308,11 @@ section {
     margin-top: 0;
     width: 500px;
     height: 550px;
-    border: solid 1px blue;
   }
 }
 
 /* Section 4 */
 .section-4 {
-  border: solid 1px blue;
 }
 
 .section-4__title {
