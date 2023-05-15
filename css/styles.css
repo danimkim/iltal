@@ -329,7 +329,6 @@ section {
 /* Section 5 */
 .section-5 {
   height: 100vh;
-  border: solid 1px cyan;
 }
 
 .section-5__title {
@@ -386,15 +385,14 @@ section {
 /* Footer Styles */
 .page__footer {
   min-width: 360px;
-  padding: 15px;
+  padding: 3rem 15px 4rem;
+  background-color: #05242e;
+  color: #fff;
 }
 
 .footer__logo-img {
   width: 100%;
   height: auto;
-}
-
-.content-container {
 }
 
 .footer__desc {
@@ -411,30 +409,52 @@ section {
 .social-media-list li img {
   width: 30px;
   height: 30px;
-  border: solid 1px red;
 }
 
 .content-container .section + div {
   margin-top: 1.5rem;
 }
 
-.content-container .section h3 {
-  font-size: 2rem;
+.page__footer .section h3 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 1.8rem;
+  margin-top: 1rem;
 }
 
-.section ul li {
-  font-size: 1.5rem;
+.page__footer .section ul li {
+  font-size: 1.3rem;
   line-height: 2.3rem;
 }
 
 .page__footer footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .content-container {
+  .page__footer {
+    padding: 50px 100px;
+  }
+
+  .page__footer .content-container {
+    max-width: 1300px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 40% 20% 20% 20%;
+    gap: 2rem;
+  }
+
+  .content-container .section + div {
+    margin-top: 0;
+  }
+
+  .content-container .section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section ul li {
+    font-size: 1.2rem;
+    line-height: 3rem;
   }
 }
