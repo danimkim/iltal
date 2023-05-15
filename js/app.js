@@ -68,7 +68,6 @@ openMenuButton.addEventListener("click", toggleMenu);
 
 // Add class 'active' to section when near top of viewport
 const addActiveToSection = (section) => {
-  console.log(getNavMenu(section.id));
   if (
     section.getBoundingClientRect().top <= 300 &&
     section.getBoundingClientRect().top >=
